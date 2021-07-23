@@ -43,7 +43,7 @@ setInterval(() => {
   localStorage.setItem("cookies", x);
 }, 100);
 
-//this function adds a cookie img to the DOM
+//this function adds a cookie image to the DOM
 const addcookie = () => {
   let e = document.createElement("img");
   e.src = "./cookie.jpeg";
