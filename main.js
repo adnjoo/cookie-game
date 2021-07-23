@@ -3,32 +3,31 @@ let button = document.getElementById("button");
 let counter = document.getElementById("counter");
 let container = document.getElementById("container");
 let clear = document.getElementById("clear");
+let cookies;
 
 //add event listeners
 button.addEventListener("click", () => {
   counter.innerHTML = +counter.innerHTML + 1;
-  x = +counter.innerHTML + 1;
+  cookies = +counter.innerHTML + 1;
   addcookie();
 });
 
 clear.addEventListener("click", () => {
-  x=0
-  localStorage.setItem("cookies",0)
-  let arr = document.querySelectorAll('img')
-  for(i in arr){
-    arr[i].remove()
+  cookies = 0;
+  localStorage.setItem("cookies", 0);
+  let arr = document.querySelectorAll("img");
+  for (i in arr) {
+    arr[i].remove();
   }
 });
-
-let x;
 
 //initialize cookie in localStorage
 setTimeout(() => {
   if (localStorage.getItem("cookies") === undefined) {
-    localStorage.setItem("cookies",0);
+    localStorage.setItem("cookies", 0);
   } else {
-    x = localStorage.getItem("cookies");
-    for (i = 0; i < x; i++) {
+    cookies = localStorage.getItem("cookies");
+    for (i = 0; i < cookies; i++) {
       addcookie();
     }
   }
@@ -36,11 +35,11 @@ setTimeout(() => {
 
 //every time interval we increment cookies
 setInterval(() => {
-  x++;
-  counter.innerHTML = x;
-  // console.log(x);
+  cookies++;
+  counter.innerHTML = cookies;
+  document.title = `${cookies} cookies - Cookie clicker`;
   addcookie();
-  localStorage.setItem("cookies", x);
+  localStorage.setItem("cookies", cookies);
 }, 100);
 
 //this function adds a cookie image to the DOM
