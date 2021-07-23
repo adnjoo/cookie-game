@@ -1,0 +1,16 @@
+$primaryBtn: rgb(182, 118, 118);
+
+#button, #clear {
+  background-color: lightblue;
+  color: blue;
+}
+
+#container {
+  margin:50px auto auto auto;
+  width:50%;
+  text-align: center;
+
+  #title {
+    font-size: 24px;
+  }
+}
