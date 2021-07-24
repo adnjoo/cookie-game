@@ -7,3 +7,5 @@ Tech used: sass
 <a href='https://adnjoo.github.io/cookie-game/'>
 <img src='./scrn.png' width='250px'>
 </a>
+
+<img src='./monster.jpeg' width='250px'>
